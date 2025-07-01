@@ -1,11 +1,75 @@
-boton {
-  display: inline-block;
-  background-color: #28a745;
+body {
+  font-family: Arial, sans-serif;
+  background: #f8f8f8;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background-color: #d6336c;
   color: white;
-  padding: 0.5rem 1rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+section {
+  padding: 1.5rem;
+  margin: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #d6336c;
+}
+
+/* Grid de boletos */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
   margin-top: 1rem;
-  text-decoration: none;
+}
+
+.boleto {
+  padding: 0.5rem;
+  text-align: center;
   border-radius: 5px;
+  color: white;
+  font-weight: bold;
+}
+
+.disponible {
+  background-color: #28a745;
+}
+
+.ocupado {
+  background-color: #dc3545;
+}
+
+/* Formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #d6336c;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
 footer {
