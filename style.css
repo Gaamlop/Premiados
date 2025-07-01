@@ -25,51 +25,14 @@ h2 {
   color: #d6336c;
 }
 
-/* Grid de boletos */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 10px;
-  margin-top: 1rem;
-}
-
-.boleto {
-  padding: 0.5rem;
-  text-align: center;
-  border-radius: 5px;
-  color: white;
-  font-weight: bold;
-}
-
-.disponible {
+.boton {
+  display: inline-block;
   background-color: #28a745;
-}
-
-.ocupado {
-  background-color: #dc3545;
-}
-
-/* Formulario */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 1rem;
-}
-
-input {
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-button {
-  background-color: #d6336c;
   color: white;
-  padding: 10px;
-  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  text-decoration: none;
   border-radius: 5px;
-  font-weight: bold;
 }
 
 footer {
