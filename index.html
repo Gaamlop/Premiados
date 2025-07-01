@@ -1,19 +1,66 @@
-<!
-  <section class="boletos">
-    <h2>📄 Boletos Disponibles</h2>
-    <p>(Actualiza con una imagen o lista de números)</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rifas Express</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🎉 Rifas Express</h1>
+    <p>Participa por premios desde $20 MXN</p>
+  </header>
+
+  <section class="actual">
+    <h2>🎁 Rifa Actual</h2>
+    <p>Premio: Audífonos inalámbricos</p>
+    <p>Fecha del sorteo: 15 de julio</p>
   </section>
 
-  <section class="ganadores">
-    <h2>🏆 Ganadores Anteriores</h2>
-    <ul>
-      <li>🎉 María López - $1,000 MXN</li>
-      <li>🎉 Juan Pérez - Smartwatch</li>
-    </ul>
+  <section class="boletos">
+    <h2>📄 Boletos Disponibles</h2>
+    <div class="grid">
+      <!-- Puedes cambiar "ocupado" o "disponible" según la venta -->
+      <!-- Solo edita la clase para cambiar color -->
+      <!-- 30 boletos de ejemplo -->
+      <span class="boleto disponible">1</span>
+      <span class="boleto ocupado">2</span>
+      <span class="boleto disponible">3</span>
+      <span class="boleto ocupado">4</span>
+      <span class="boleto disponible">5</span>
+      <!-- ... puedes duplicar hasta el número deseado -->
+    </div>
+  </section>
+
+  <section class="formulario">
+    <h2>📨 Aparta tu Boleto</h2>
+    <form id="formulario">
+      <input type="text" id="nombre" placeholder="Tu nombre" required>
+      <input type="text" id="whatsapp" placeholder="Tu número de WhatsApp" required>
+      <input type="text" id="numeros" placeholder="Números que quieres (ej. 5, 10, 23)" required>
+      <button type="submit">Enviar por WhatsApp</button>
+    </form>
   </section>
 
   <footer>
-    <p>Contacto vía <a href="https://wa.me/522222151247">WhatsApp</a> | © 2025 Rifas Express</p>
+    <p>© 2025 Rifas Express | Contacto: <a href="https://wa.me/5211234567890">WhatsApp</a></p>
   </footer>
+
+  <script>
+    const formulario = document.getElementById('formulario');
+    formulario.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nombre = document.getElementById('nombre').value;
+      const whatsapp = document.getElementById('whatsapp').value;
+      const numeros = document.getElementById('numeros').value;
+      const mensaje = `Hola, quiero participar en la rifa. 
+Nombre: ${nombre}
+WhatsApp: ${whatsapp}
+Boletos que quiero: ${numeros}`;
+      const enlace = `https://wa.me/5211234567890?text=${encodeURIComponent(mensaje)}`;
+      window.open(enlace, '_blank');
+    });
+  </script>
 </body>
 </html>
