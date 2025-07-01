@@ -1,48 +1,40 @@
-<!DOCTYPE html>
+DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rifas Express</title>
+  <title>PRemium Sorteos</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <img src="https://i.imgur.com/EV5Z5vZ.png" alt="Logo Rifas Express" class="logo" />
-    <h1>🎉 Rifas Express</h1>
-    <p>¡Participa, diviértete y gana premios increíbles con solo $20!</p>
+    <h1>🎉 PRemium Sorteos</h1>
+    <p>¡Aparta tu número de la suerte por solo $20!</p>
   </header>
 
-  <nav class="navbar">
-    <a href="#actual">Rifa Actual</a>
-    <a href="#boletos">Boletos</a>
-    <a href="#formulario">Apartar</a>
-    <a href="#ganadores">Ganadores</a>
-  </nav>
-
-  <section id="actual" class="actual">
-    <h2>🎁 Rifa Actual</h2>
-    <p><strong>Premio:</strong> Audífonos inalámbricos edición gamer 🎧</p>
-    <p><strong>Fecha del sorteo:</strong> 15 de julio — ¡En vivo por Facebook Live!</p>
-  </section>
-
-  <section id="boletos" class="boletos">
-    <h2>🎟️ Elige tu número de la suerte</h2>
+  <section class="boletos">
+    <h2>🎟️ Elige tu número</h2>
     <div class="grid">
-      <!-- BOLETOS DEL 2 AL 200 -->
-      <!-- Solo cambiar la clase a "ocupado" para los vendidos -->
-      <!-- Aquí unos de ejemplo. Puedes repetir el patrón. -->
+      <!-- BOLETOS 1 AL 200 -->
+      <!-- Puedes acortar el contenido si es muy largo -->
+      <!-- Ejemplo de 10 primeros números: -->
+      <span class="boleto disponible">1</span>
       <span class="boleto disponible">2</span>
-      <span class="boleto ocupado">3</span>
+      <span class="boleto disponible">3</span>
       <span class="boleto disponible">4</span>
       <span class="boleto disponible">5</span>
-      <span class="boleto ocupado">6</span>
-      <!-- ...continúa hasta el 200 con el mismo formato -->
+      <span class="boleto disponible">6</span>
+      <span class="boleto disponible">7</span>
+      <span class="boleto disponible">8</span>
+      <span class="boleto disponible">9</span>
+      <span class="boleto disponible">10</span>
+      <!-- Continúa hasta el 200 -->
     </div>
   </section>
 
-  <section id="formulario" class="formulario">
-    <h2>📨 Aparta tu Boleto</h2>
+  <section class="formulario">
+    <h2>📨 Adquiere tu Boleto</h2>
     <form id="formulario">
       <input type="text" id="nombre" placeholder="Tu nombre" required>
       <input type="text" id="whatsapp" placeholder="Tu número de WhatsApp" required>
@@ -51,16 +43,8 @@
     </form>
   </section>
 
-  <section id="ganadores" class="ganadores">
-    <h2>🏆 Ganadores Anteriores</h2>
-    <ul>
-      <li>🎉 María López - $1,000 MXN</li>
-      <li>🎉 Juan Pérez - Smartwatch</li>
-    </ul>
-  </section>
-
   <footer>
-    <p>© 2025 Rifas Express | Contacto: <a href="https://wa.me/5211234567890">WhatsApp</a></p>
+    <p>© 2025 PRemium Sorteos | Contacto: <a href="https://wa.me/522222151247">WhatsApp</a></p>
   </footer>
 
   <script>
@@ -70,8 +54,8 @@
       const nombre = document.getElementById('nombre').value;
       const whatsapp = document.getElementById('whatsapp').value;
       const numeros = document.getElementById('numeros').value;
-      const mensaje = `Hola, quiero participar en la rifa.\\nNombre: ${nombre}\\nWhatsApp: ${whatsapp}\\nBoletos: ${numeros}`;
-      const enlace = `https://wa.me/5211234567890?text=${encodeURIComponent(mensaje)}`;
+      const mensaje = `Hola, quiero participar en el sorteo.\\nNombre: ${nombre}\\nWhatsApp: ${whatsapp}\\nBoletos: ${numeros}`;
+      const enlace = `https://wa.me/522222151247?text=${encodeURIComponent(mensaje)}`;
       window.open(enlace, '_blank');
     });
   </script>
